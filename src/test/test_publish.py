@@ -18,15 +18,19 @@ from typing import Dict
 from unittest import main
 
 from pandas import DataFrame
-from lib.constants import OUTPUT_COLUMN_ADAPTER, SRC, V3_TABLE_LIST
+from lib.constants import (
+    OUTPUT_COLUMN_ADAPTER_V2,
+    OUTPUT_COLUMN_ADAPTER_V3,
+    SRC,
+    TABLE_LIST_V2,
+    TABLE_LIST_V3,
+)
 from lib.io import read_table, read_lines, temporary_directory
 from lib.memory_efficient import get_table_columns
 from lib.pipeline_tools import get_pipelines, get_schema
-from lib.sql import _safe_table_name, create_sqlite_database, table_export_csv
 
 from .profiled_test_case import ProfiledTestCase
-from .test_memory_efficient import _compare_tables_equal
-from publish import copy_tables, convert_tables_to_json, publish_global_tables, merge_output_tables
+from publish import convert_tables_to_json, publish_global_tables, merge_output_tables
 
 # Make the main schema a global variable so we don't have to reload it in every test
 SCHEMA = get_schema()
@@ -100,7 +104,12 @@ class TestPublish(ProfiledTestCase):
         with temporary_directory() as workdir:
 
             # Copy all test tables into the temporary directory
-            copy_tables(SRC / "test" / "data", workdir)
+            publish_global_tables(
+                SRC / "test" / "data",
+                workdir,
+                use_table_names=TABLE_LIST_V2,
+                column_adapter=OUTPUT_COLUMN_ADAPTER_V2,
+            )
 
             # Create the main table
             main_table_path = workdir / "main.csv"
@@ -112,13 +121,18 @@ class TestPublish(ProfiledTestCase):
         with temporary_directory() as workdir:
 
             # Copy all test tables into the temporary directory
-            publish_global_tables(SRC / "test" / "data", workdir, use_table_names=V3_TABLE_LIST)
+            publish_global_tables(
+                SRC / "test" / "data",
+                workdir,
+                use_table_names=TABLE_LIST_V3,
+                column_adapter=OUTPUT_COLUMN_ADAPTER_V3,
+            )
 
             # Create the main table
             main_table_path = workdir / "main.csv"
-            merge_output_tables(workdir, main_table_path, use_table_names=V3_TABLE_LIST)
+            merge_output_tables(workdir, main_table_path, use_table_names=TABLE_LIST_V3)
 
-            self._test_make_main_table_helper(main_table_path, OUTPUT_COLUMN_ADAPTER)
+            self._test_make_main_table_helper(main_table_path, OUTPUT_COLUMN_ADAPTER_V3)
 
     def test_convert_to_json(self):
         with temporary_directory() as workdir:
