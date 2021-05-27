@@ -22,23 +22,23 @@ geographic (and temporal) keys as it is done for the [main table](#main-table).
 
 | Table | Keys<sup>1</sup> | Content | URL | Source<sup>2</sup> |
 | ----- | ---------------- | ------- | --- | ------------------ |
-| [Main](#main-table) | `[key][date]` | Flat table with records from (almost) all other tables joined by `date` and/or `key`; see below for more details | [main.csv](https://storage.googleapis.com/covid19-open-data/v2/main.csv) | All tables below |
-| [Index](./docs/table-index.md) | `[key]` | Various names and codes, useful for joining with other datasets | [index.csv](https://storage.googleapis.com/covid19-open-data/v2/index.csv), [index.json](https://storage.googleapis.com/covid19-open-data/v2/index.json) | Wikidata, DataCommons, Eurostat |
-| [Demographics](./docs/table-demographics.md) | `[key]` | Various (current<sup>3</sup>) population statistics | [demographics.csv](https://storage.googleapis.com/covid19-open-data/v2/demographics.csv), [demographics.json](https://storage.googleapis.com/covid19-open-data/v2/demographics.json) | Wikidata, DataCommons, WorldBank, WorldPop, Eurostat |
-| [Economy](./docs/table-economy.md) | `[key]` | Various (current<sup>3</sup>) economic indicators | [economy.csv](https://storage.googleapis.com/covid19-open-data/v2/economy.csv), [economy.json](https://storage.googleapis.com/covid19-open-data/v2/economy.json) | Wikidata, DataCommons, Eurostat |
-| [Epidemiology](./docs/table-epidemiology.md) | `[key][date]` | COVID-19 cases, deaths, recoveries and tests | [epidemiology.csv](https://storage.googleapis.com/covid19-open-data/v2/epidemiology.csv), [epidemiology.json](https://storage.googleapis.com/covid19-open-data/v2/epidemiology.json) | Various<sup>2</sup> |
-| [Emergency Declarations](./docs/table-emergency-declarations.md) | `[key][date]` | Government emergency declarations and mitigation policies | [lawatlas-emergency-declarations.csv](https://storage.googleapis.com/covid19-open-data/v2/lawatlas-emergency-declarations.csv) | LawAtlas Project |
-| [Geography](./docs/table-geography.md) | `[key]` | Geographical information about the region | [geography.csv](https://storage.googleapis.com/covid19-open-data/v2/geography.csv), [geography.json](https://storage.googleapis.com/covid19-open-data/v2/geography.json) | Wikidata |
-| [Health](./docs/table-health.md) | `[key]` | Health indicators for the region | [health.csv](https://storage.googleapis.com/covid19-open-data/v2/health.csv), [health.json](https://storage.googleapis.com/covid19-open-data/v2/geography.json) | Wikidata, WorldBank, Eurostat |
-| [Hospitalizations](./docs/table-hospitalizations.md) | `[key][date]` | Information related to patients of COVID-19 and hospitals |  [hospitalizations.csv](https://storage.googleapis.com/covid19-open-data/v2/hospitalizations.csv), [hospitalizations.json](https://storage.googleapis.com/covid19-open-data/v2/hospitalization.json) | Various<sup>2</sup> |
-| [Mobility](./docs/table-mobility.md) | `[key][date]` | Various metrics related to the movement of people.<br/><br/>To download or use the data, you must agree to the Google [Terms of Service](https://policies.google.com/terms). | [mobility.csv](https://storage.googleapis.com/covid19-open-data/v2/mobility.csv), [mobility.json](https://storage.googleapis.com/covid19-open-data/v2/mobility.json) | Google |
-| [Search Trends](./docs/table-search-trends.md) | `[key][date]` | Trends in symptom search volumes due to COVID-19.<br/><br/>To download or use the data, you must agree to the Google [Terms of Service](https://policies.google.com/terms). | [google-search-trends.csv](https://storage.googleapis.com/covid19-open-data/v2/google-search-trends.csv) | Google |
-| [Vaccinations](./docs/table-vaccinations.md) | `[key][date]` | Trends in persons vaccinated and population vaccination rate regarding various Covid-19 vaccines.<br/><br/> | [vaccinations.csv](https://storage.googleapis.com/covid19-open-data/v2/vaccinations.csv) | Google |
-| [Government Response](./docs/table-government-response.md) | `[key][date]` | Government interventions and their relative stringency | [oxford-government-response.csv](https://storage.googleapis.com/covid19-open-data/v2/oxford-government-response.csv), [oxford-government-response.json](https://storage.googleapis.com/covid19-open-data/v2/oxford-government-response.json) | University of Oxford |
-| [Weather](./docs/table-weather.md) | `[key][date]` | Dated meteorological information for each region | [weather.csv](https://storage.googleapis.com/covid19-open-data/v2/weather.csv) | NOAA |
-| [WorldBank](./docs/table-worldbank.md) | `[key]` | Latest record for each indicator from WorldBank for all reporting countries | [worldbank.csv](https://storage.googleapis.com/covid19-open-data/v2/worldbank.csv), [worldbank.json](https://storage.googleapis.com/covid19-open-data/v2/worldbank.json) | WorldBank |
-| [By Age](./docs/table-by-age.md) | `[key][date]` | Epidemiology and hospitalizations data stratified by age | [by-age.csv](https://storage.googleapis.com/covid19-open-data/v2/by-age.csv), [by-age.json](https://storage.googleapis.com/covid19-open-data/v2/by-age.json) | Various<sup>2</sup> |
-| [By Sex](./docs/table-by-sex.md) | `[key][date]` | Epidemiology and hospitalizations data stratified by sex | [by-sex.csv](https://storage.googleapis.com/covid19-open-data/v2/by-sex.csv), [by-sex.json](https://storage.googleapis.com/covid19-open-data/v2/by-sex.json) | Various<sup>2</sup> |
+| [Main](#main-table) | `[key][date]` | Flat table with records from (almost) all other tables joined by `date` and/or `key`; see below for more details | [aggregated.csv](https://storage.googleapis.com/covid19-open-data/v3/aggregated.csv) | All tables below |
+| [Index](./docs/table-index.md) | `[key]` | Various names and codes, useful for joining with other datasets | [index.csv](https://storage.googleapis.com/covid19-open-data/v3/index.csv), [index.json](https://storage.googleapis.com/covid19-open-data/v3/index.json) | Wikidata, DataCommons, Eurostat |
+| [Demographics](./docs/table-demographics.md) | `[key]` | Various (current<sup>3</sup>) population statistics | [demographics.csv](https://storage.googleapis.com/covid19-open-data/v3/demographics.csv), [demographics.json](https://storage.googleapis.com/covid19-open-data/v3/demographics.json) | Wikidata, DataCommons, WorldBank, WorldPop, Eurostat |
+| [Economy](./docs/table-economy.md) | `[key]` | Various (current<sup>3</sup>) economic indicators | [economy.csv](https://storage.googleapis.com/covid19-open-data/v3/economy.csv), [economy.json](https://storage.googleapis.com/covid19-open-data/v3/economy.json) | Wikidata, DataCommons, Eurostat |
+| [Epidemiology](./docs/table-epidemiology.md) | `[key][date]` | COVID-19 cases, deaths, recoveries and tests | [epidemiology.csv](https://storage.googleapis.com/covid19-open-data/v3/epidemiology.csv), [epidemiology.json](https://storage.googleapis.com/covid19-open-data/v3/epidemiology.json) | Various<sup>2</sup> |
+| [Emergency Declarations](./docs/table-emergency-declarations.md) | `[key][date]` | Government emergency declarations and mitigation policies | [lawatlas-emergency-declarations.csv](https://storage.googleapis.com/covid19-open-data/v3/lawatlas-emergency-declarations.csv) | LawAtlas Project |
+| [Geography](./docs/table-geography.md) | `[key]` | Geographical information about the region | [geography.csv](https://storage.googleapis.com/covid19-open-data/v3/geography.csv), [geography.json](https://storage.googleapis.com/covid19-open-data/v3/geography.json) | Wikidata |
+| [Health](./docs/table-health.md) | `[key]` | Health indicators for the region | [health.csv](https://storage.googleapis.com/covid19-open-data/v3/health.csv), [health.json](https://storage.googleapis.com/covid19-open-data/v3/geography.json) | Wikidata, WorldBank, Eurostat |
+| [Hospitalizations](./docs/table-hospitalizations.md) | `[key][date]` | Information related to patients of COVID-19 and hospitals |  [hospitalizations.csv](https://storage.googleapis.com/covid19-open-data/v3/hospitalizations.csv), [hospitalizations.json](https://storage.googleapis.com/covid19-open-data/v3/hospitalization.json) | Various<sup>2</sup> |
+| [Mobility](./docs/table-mobility.md) | `[key][date]` | Various metrics related to the movement of people.<br/><br/>To download or use the data, you must agree to the Google [Terms of Service](https://policies.google.com/terms). | [mobility.csv](https://storage.googleapis.com/covid19-open-data/v3/mobility.csv), [mobility.json](https://storage.googleapis.com/covid19-open-data/v3/mobility.json) | Google |
+| [Search Trends](./docs/table-search-trends.md) | `[key][date]` | Trends in symptom search volumes due to COVID-19.<br/><br/>To download or use the data, you must agree to the Google [Terms of Service](https://policies.google.com/terms). | [google-search-trends.csv](https://storage.googleapis.com/covid19-open-data/v3/google-search-trends.csv) | Google |
+| [Vaccinations](./docs/table-vaccinations.md) | `[key][date]` | Trends in persons vaccinated and population vaccination rate regarding various Covid-19 vaccines.<br/><br/> | [vaccinations.csv](https://storage.googleapis.com/covid19-open-data/v3/vaccinations.csv) | Google |
+| [Government Response](./docs/table-government-response.md) | `[key][date]` | Government interventions and their relative stringency | [oxford-government-response.csv](https://storage.googleapis.com/covid19-open-data/v3/oxford-government-response.csv), [oxford-government-response.json](https://storage.googleapis.com/covid19-open-data/v3/oxford-government-response.json) | University of Oxford |
+| [Weather](./docs/table-weather.md) | `[key][date]` | Dated meteorological information for each region | [weather.csv](https://storage.googleapis.com/covid19-open-data/v3/weather.csv) | NOAA |
+| [WorldBank](./docs/table-worldbank.md) | `[key]` | Latest record for each indicator from WorldBank for all reporting countries | [worldbank.csv](https://storage.googleapis.com/covid19-open-data/v3/worldbank.csv), [worldbank.json](https://storage.googleapis.com/covid19-open-data/v3/worldbank.json) | WorldBank |
+| [By Age](./docs/table-by-age.md) | `[key][date]` | Epidemiology and hospitalizations data stratified by age | [by-age.csv](https://storage.googleapis.com/covid19-open-data/v3/by-age.csv), [by-age.json](https://storage.googleapis.com/covid19-open-data/v3/by-age.json) | Various<sup>2</sup> |
+| [By Sex](./docs/table-by-sex.md) | `[key][date]` | Epidemiology and hospitalizations data stratified by sex | [by-sex.csv](https://storage.googleapis.com/covid19-open-data/v3/by-sex.csv), [by-sex.json](https://storage.googleapis.com/covid19-open-data/v3/by-sex.json) | Various<sup>2</sup> |
 
 <sup>1</sup> `key` is a unique string for the specific geographical region built from a combination
 of codes such as `ISO 3166`, `NUTS`, `FIPS` and other local equivalents.\
@@ -90,7 +90,7 @@ performance-wise, it may be better to download the data separately and join the 
 
 Each region has its own version of the main table, so you can pull all the data for a specific
 region using a single endpoint, the URL for each region is:
-* Data for `key` in CSV format: `https://storage.googleapis.com/covid19-open-data/v2/${key}/main.csv`
+* Data for `key` in CSV format: `https://storage.googleapis.com/covid19-open-data/v3/${key}/aggregated.csv`
 * Data for `key` in JSON format: `https://storage.googleapis.com/covid19-open-data/v2/${key}/main.json`
 
 Each table has a full version as well as subsets with only the last day of data.
@@ -98,7 +98,7 @@ The full version is accessible at the URL described [in the table above](#open-c
 The subsets can be found by appending `latest` to the path. For example, the subsets of the main
 table are available at the following locations:
 * Latest: https://storage.googleapis.com/covid19-open-data/v2/latest/main.csv
-* Time series: https://storage.googleapis.com/covid19-open-data/v2/main.csv
+* Time series: https://storage.googleapis.com/covid19-open-data/v3/aggregated.csv
 
 Note that the `latest` version contains the last non-null record for each key. All of the above
 listed tables have a corresponding JSON version; simply replace `csv` with `json` in the link.
@@ -125,7 +125,7 @@ computer, simply go to this URL: https://colab.research.google.com/github/Google
 You can import the data directly into Google Sheets, as long as you stay within the size limits.
 For instance, the following formula loads the latest epidemiology data into the current sheet:
 ```python
-=IMPORTDATA("https://storage.googleapis.com/covid19-open-data/v2/latest/epidemiology.csv")
+=IMPORTDATA("https://storage.googleapis.com/covid19-open-data/v3/latest/epidemiology.csv")
 ```
 Note that Google Sheets has a size limitation, so only data from the `latest` subfolder can be
 imported automatically. To work around that, simply download the file and import it via the File
@@ -134,28 +134,28 @@ menu.
 ### R
 If you prefer R, then this is all you need to do to load the epidemiology data:
 ```R
-data <- read.csv("https://storage.googleapis.com/covid19-open-data/v2/epidemiology.csv")
+data <- read.csv("https://storage.googleapis.com/covid19-open-data/v3/epidemiology.csv")
 ```
 
 ### Python
 In Python, you need to have the package `pandas` installed to get started:
 ```python
 import pandas
-data = pandas.read_csv("https://storage.googleapis.com/covid19-open-data/v2/epidemiology.csv")
+data = pandas.read_csv("https://storage.googleapis.com/covid19-open-data/v3/epidemiology.csv")
 ```
 
 ### jQuery
 Loading the JSON file using jQuery can be done directly from the output folder,
 this code snippet loads the epidemiology table into the `data` variable:
 ```javascript
-$.getJSON("https://storage.googleapis.com/covid19-open-data/v2/epidemiology.json", data => { ... }
+$.getJSON("https://storage.googleapis.com/covid19-open-data/v3/epidemiology.json", data => { ... }
 ```
 
 ### Powershell
 You can also use Powershell to get the latest data for a country directly from
 the command line, for example to query the latest epidemiology data for Australia:
 ```powershell
-Invoke-WebRequest 'https://storage.googleapis.com/covid19-open-data/v2/latest/epidemiology.csv' | ConvertFrom-Csv | `
+Invoke-WebRequest 'https://storage.googleapis.com/covid19-open-data/v3/latest/epidemiology.csv' | ConvertFrom-Csv | `
     where key -eq 'AU' | select date,total_confirmed,total_deceased,total_recovered
 ```
 
@@ -274,11 +274,15 @@ The following persons have made significant contributions to this project:
 * Zack Ontiveros
 * Ruth Alcantara
 * Donny Cheung
+* Michael Tribble Hamamoto
 * Aurora Cheung
 * Chandan Nath
 * Paula Le
 * Ofir Picazo Navarro
-
+* Fraser Tan
+* Jon Morgan
+* Bob MacDonald
+* Benny Ayalew
 
 
 # Recommended citation
